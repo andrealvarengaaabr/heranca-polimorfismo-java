@@ -1,0 +1,22 @@
+**ETAPA 3**
+
+1) Ele descreve a relação de herança (generalização e especialização) na hierarquia de classes do sistema que se está trabalhando:
+Todo Diretor é um Gerente": Significa que a classe `Diretor` herda de `Gerente` (`extends Gerente`). Logo, tudo o que um ''Gerente'' tem e faz (atributos restritos a uma classe ), o ''Diretor'' também possui, podendo adicionar novas características ou sobrescrever comportamentos.
+"Todo Gerente é um Funcionario"** significa que a classe ''Gerente'' herda de ''Funcionario'' (''extends Funcionario''). Como o ''Diretor'' herda do ''Gerente'', por transitividade, **todo Diretor também é um Funcionário**.
+Em POO, isso garante o princípio da substituição (polimorfismo): qualquer objeto de uma classe filha pode ser tratado como se fosse da classe mãe.
+
+2)
+super(...): É usado nos construtores para invocar o construtor da classe mãe (superclasse). Ele serve para reutilizar a inicialização dos atributos que foram herdados.É a primeira linha do construtor da classe filha.
+super.getBonificacao(): É uma chamada a um método específico da classe mãe. É utilizado quando a classe filha quer aproveitar a lógica já implementada na mãe 
+---
+
+
+3)
+Como ele sabe: O método registra() chama f.getBonificacao(). Como o Java utiliza a sobreescrita de métodos (`@Override`) e a vinculação dinâmica (dynamic binding) ele olha para o objeto real que foi passado. Isso é decidido no tempo de execução. 
+
+4)
+Não. Não será necessário alterar a classe `ControleDeBonificacoes`. Porque a classe ControleDeBonificacoes foi projetada usando polimorfismo puro: ela aceita o tipo genérico `Funcionario` e chama apenas f.getBonificacao() , qualquer nova classe criada que herde de Funcionario funcionará automaticamente com o ControleDeBonificacoes.
+
+5) 
+Porque uma classe abstrata representa um conceito genérico e incompleto. No mundo real, a empresa não contrata um "funcionário genérico", ela contrata um cargo específico. Permitir new Funcionario geraria objetos com regras de negócio indefinidas como o cálculo de bonificação, que varia para cada cargo.
+Ela serve como um modelo base para as classes filhas. Ela centraliza atributos e comportamentos comuns para evitar repetição de código (reutilização) e define métodos abstratos, ajuda todas as classes filhas a implementarem suas próprias regras, garantindo a padronização da arquitetura do sistema.
