@@ -1,8 +1,8 @@
 **ETAPA 3**
 
 1) Ele descreve a relação de herança (generalização e especialização) na hierarquia de classes do sistema que se está trabalhando:
-Todo Diretor é um Gerente": Significa que a classe `Diretor` herda de `Gerente` (`extends Gerente`). Logo, tudo o que um ''Gerente'' tem e faz (atributos restritos a uma classe ), o ''Diretor'' também possui, podendo adicionar novas características ou sobrescrever comportamentos.
-"Todo Gerente é um Funcionario"** significa que a classe ''Gerente'' herda de ''Funcionario'' (''extends Funcionario''). Como o ''Diretor'' herda do ''Gerente'', por transitividade, **todo Diretor também é um Funcionário**.
+Todo Diretor é um Gerente é porque a classe Diretor herda de Gerente. Logo, tudo o que um Gerente tem e faz, os atributos restritos a classe ), o Diretor também possui, podendo adicionar novas características ou sobrescrever comportamentos.
+Todo Gerente é um Funcionario significa que a classe Gerente herda de Funcionario. Como o Diretor herda do Gerente, por transitividade, todo Diretor também é um Funcionário.
 Em POO, isso garante o princípio da substituição (polimorfismo): qualquer objeto de uma classe filha pode ser tratado como se fosse da classe mãe.
 
 2)
