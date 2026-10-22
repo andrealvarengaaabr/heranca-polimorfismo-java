@@ -1,4 +1,43 @@
-**ETAPA 3**
+**Herança, Polimorfismo e Classes Abstratas em Java**
+O projeto trata-se de um programa em Java desenvolvido para a 4ª Lista de Exercício de Programação Orientada a Objetos (POO) ministrada pelo MSC Rodrigo Lima. O sistema cadastra funcionários de diferentes cargos, calcula a bonificação de fim de ano de cada um utilizando herança, classes abstratas e polimorfismo, e gerencia o controle financeiro das bonificações da empresa.
+
+
+**Estrutura do Projeto**
+O projeto segue estritamente a separação de responsabilidades em pacotes:
+```text
+src
+└── funcionarios
+    ├── app
+    │    └── ProgramaFuncionario.java
+    │ 
+    ├── model
+    │    ├── Funcionario.java
+    │    ├── Programador.java
+    │    ├── Gerente.java
+    │    ├── Diretor.java
+    │    └── Estagiario.java
+    │ 
+    └── service
+         └── ControleDeBonificacoes.java
+
+**`app`**: Classe principal (`main`)
+**`model`**: Classes de domínio que modelam os funcionários, aplicando herança e polimorfismo.
+**`service`**: Regras de negócio desacopladas que operam de forma polimórfica sobre qualquer tipo de funcionário
+
+
+**Como Executar o Programa**
+
+1. Certifique-se de ter o JDK.
+2. Abra o terminal na pasta raiz contendo o diretório `src`.
+3. Compile todas as classes do projeto:
+4 . Execute o programa.
+
+
+Tecnologias Utilizadas
+**Java** (JDK 8+)
+**Swing (`JOptionPane`)** para interfaces gráficas simples.
+
+
 
 1) Ele descreve a relação de herança (generalização e especialização) na hierarquia de classes do sistema que se está trabalhando:
 Todo Diretor é um Gerente é porque a classe Diretor herda de Gerente. Logo, tudo o que um Gerente tem e faz, os atributos restritos a classe ), o Diretor também possui, podendo adicionar novas características ou sobrescrever comportamentos.
@@ -20,3 +59,7 @@ Não. Não será necessário alterar a classe `ControleDeBonificacoes`. Porque a
 5) 
 Porque uma classe abstrata representa um conceito genérico e incompleto. No mundo real, a empresa não contrata um "funcionário genérico", ela contrata um cargo específico. Permitir new Funcionario geraria objetos com regras de negócio indefinidas como o cálculo de bonificação, que varia para cada cargo.
 Ela serve como um modelo base para as classes filhas. Ela centraliza atributos e comportamentos comuns para evitar repetição de código (reutilização) e define métodos abstratos, ajuda todas as classes filhas a implementarem suas próprias regras, garantindo a padronização da arquitetura do sistema.
+
+
+
+AUTOR: ANDRE ALVARENGA
